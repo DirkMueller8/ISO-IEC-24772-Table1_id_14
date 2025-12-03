@@ -1,18 +1,19 @@
 ## Good Coding Principles acc. to ISO/IEC 24772-1:2024
 
-### Standard: ### 
-ISO/IEC 24772-1:  
+### Standard ###  
+**ISO/IEC 24772-1**  
 Programming languages — Avoiding vulnerabilities in programming languages —
 Part 1: Language-independent catalogue of vulnerabilities  
 
 ### Good Coding Recommendation  
-"Prohibit dependence on side effects of a term in the expression 
-itself", in Table 1, Number 14, on p. 29.   
+"*Prohibit dependence on side effects of a term in the expression 
+itself*", in Table 1, Number 14, on p. 29.   
 
 ### Theory around the Example  
 #### Assignments in Expressions  
 - C# allows assignments in expressions because in C# an assignment is also an expression that yields the assigned value. The language defines the evaluation order, so expressions like `int x = (y = 3);` are well‑defined.  
-- It’s acceptable when the assignment is the single side effect you need and it makes the code clearer -  common idioms are input/scan loops and condition checks (e.g., while `((line = reader.ReadLine()) != null)`).  
+- It’s acceptable when the assignment is the single side effect you need and it makes the code clearer -  common idioms are input/scan loops and condition checks (e.g.,   
+`while ((line = reader.ReadLine()) != null)`).  
 - It’s not ok when the same expression relies on multiple side effects or reads the same variable before and after the assignment in the same expression (that makes the code hard to read and error prone). 
 
 ### Explanation of Problematic and Good Code  

@@ -6,8 +6,8 @@ Programming languages — Avoiding vulnerabilities in programming languages —
 Part 1: Language-independent catalogue of vulnerabilities  
 
 ### Good Coding Recommendation  
-"*Prohibit dependence on side effects of a term in the expression 
-itself*", in Table 1, Number 14, on p. 29.   
+"*Prohibit dependence on side effects of a term in the expression  itself*",   
+in Table 1, Number 14, on p. 29.   
 
 ### Theory around the Example  
 #### Assignments in Expressions  
